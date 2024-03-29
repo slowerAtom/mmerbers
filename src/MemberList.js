@@ -1,5 +1,4 @@
 import React from 'react';
-import { Table } from 'react-bootstrap'; // Bootstrap을 사용하는 경우
 
 const MemberList = ({ members }) => {
   return (
