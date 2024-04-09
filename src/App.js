@@ -1,20 +1,25 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
-// import { CalendarDaysIcon, HandRaisedIcon } from '@heroicons/react/24/outline'
-// import InputSearch from './components/InputSearch';
-// import SearchResult from './components/SearchResult';
-import { Route, Routes } from 'react-router-dom';
-import HomePage from './components/HomePage';
-import MemberCreate from './components/MemberCreate';
-
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/member/create" element={<MemberCreate />} />
-    </Routes>
-  )
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
