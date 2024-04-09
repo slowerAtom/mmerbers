@@ -49,7 +49,19 @@ export const MUSCLE_MAP = {
             "내접근",
             "대퇴근막장근",
         ],
-    }
+    },
+    [MUSCLE_CATEGORY.KNEE]: {
+    },
+    [MUSCLE_CATEGORY.ANKLES_TOES]: {
+    },
+    [MUSCLE_CATEGORY.NECK]: {
+    },
+    [MUSCLE_CATEGORY.SHOULDER]: {
+    },
+    [MUSCLE_CATEGORY.ELBOWS_WRISTS]: {
+    },
+    [MUSCLE_CATEGORY.TRUNK]: {
+    },
 }
 
 export const MUSCLE_TEXT = {
