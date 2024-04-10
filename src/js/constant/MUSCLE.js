@@ -14,29 +14,29 @@ export const MUSCLE_MAP = {
             [LUMBAR_PELVIC_COMPLEX.ADDUCTORS],
             [OTHER.DIAPHRAGM],
             [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MAXIMUS],
-            "반대쪽 목 굴곡근",
+            [OTHER.OPPOSITE_NECK_FLEXOR],
             [KNEE.HAMSTRING],
-            "요방형근",
+            [OTHER.PIRIFORMIS],
             [TRUNK.ERECTOR_SPINAE],
         ],
         [LUMBAR_PELVIC_COMPLEX.ILIOPSOAS]: [
             [LUMBAR_PELVIC_COMPLEX.ILIOPSOAS],
-            "이상근",
-            "대퇴근막장근",
+            [OTHER.SARTORIUS],
+            [OTHER.TENSOR_FASCIAE_LATAE],
             [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MEDIUS],
             [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MAXIMUS],
         ],
         [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MEDIUS]: [
-            "반대편 복직근",
+            [OTHER.OPPOSITE_RECTUS_ABDOMINIS],
             [LUMBAR_PELVIC_COMPLEX.ADDUCTORS],
-            "비골근",
-            "요방형근",
+            [OTHER.PERONEUS],
+            [OTHER.PIRIFORMIS],
         ],
         [LUMBAR_PELVIC_COMPLEX.RECTUS_FEMORIS]: [
             [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MAXIMUS],
             [KNEE.HAMSTRING],
             [OTHER.DIAPHRAGM],
-            "요방형근",
+            [OTHER.PIRIFORMIS],
             [TRUNK.ERECTOR_SPINAE],
         ],
         [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MAXIMUS]: [
@@ -44,23 +44,245 @@ export const MUSCLE_MAP = {
             [SHOULDER.PECTORALIS_MAJOR],
             [LUMBAR_PELVIC_COMPLEX.ILIOPSOAS],
             [LUMBAR_PELVIC_COMPLEX.RECTUS_FEMORIS],
-            "봉공근",
-            "이상근",
-            "내접근",
-            "대퇴근막장근",
+            [OTHER.TERES_MAJOR],
+            [OTHER.SARTORIUS],
+            [OTHER.ADDUCTOR_MAGNUS],
+            [OTHER.TENSOR_FASCIAE_LATAE],
         ],
     },
     [MUSCLE_CATEGORY.KNEE]: {
+        [KNEE.HAMSTRING]: [
+            [TRUNK.ERECTOR_SPINAE],
+            [OTHER.OPPOSITE_LATISSIMUS_DORSI],
+            [OTHER.QUADRICEPS],
+            [OTHER.GASTROCNEMIUS],
+        ],
+        [LUMBAR_PELVIC_COMPLEX.RECTUS_FEMORIS]: [
+            [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MAXIMUS],
+            [KNEE.HAMSTRING],
+            [OTHER.DIAPHRAGM],
+            [OTHER.PIRIFORMIS],
+            [TRUNK.ERECTOR_SPINAE],
+        ],
     },
     [MUSCLE_CATEGORY.ANKLES_TOES]: {
+        [ANKLES_TOES.DORSI_FLEXOR]: [
+            [OTHER.GASTROCNEMIUS_MEDIAL],
+            [OTHER.SOLEUS],
+            [OTHER.POSTERIOR_TIBIALIS],
+            [OTHER.PLANTAR_FASCIA],
+            [OTHER.TOE_FLEXORS],
+        ],
+        [ANKLES_TOES.PLANTAR_FLEXOR]: [
+            [OTHER.ANTERIOR_TIBIALIS],
+            [OTHER.PERONEUS],
+            [OTHER.TOE_EXTENSORS],
+        ],
+        [ANKLES_TOES.EVERTOR]: [
+            [OTHER.GASTROCNEMIUS_MEDIAL], 
+            [OTHER.SOLEUS], 
+            [OTHER.POSTERIOR_TIBIALIS], 
+            [OTHER.PLANTAR_FASCIA], 
+            [OTHER.TOE_FLEXORS],
+        ],
+        [ANKLES_TOES.INVERTER]: [
+            [OTHER.ANTERIOR_TIBIALIS], 
+            [OTHER.PERONEUS], 
+            [OTHER.TOE_EXTENSORS],
+        ],
+        [ANKLES_TOES.FIRST_TOE_FLEXOR]: [
+            [OTHER.TOE_EXTENSORS], 
+            [OTHER.ANTERIOR_TIBIALIS],
+        ],
+        [ANKLES_TOES.FIRST_TOE_EXTENSOR]: [
+            [OTHER.TOE_FLEXORS], 
+            [OTHER.GASTROCNEMIUS_MEDIAL], 
+            [OTHER.POSTERIOR_TIBIALIS],
+        ],
+        [ANKLES_TOES.TWO_FIVE_TH_TOE_FLEXOR]: [
+            [OTHER.TOE_EXTENSORS], 
+            [OTHER.ANTERIOR_TIBIALIS],
+        ],
+        [ANKLES_TOES.TWO_FIVE_TH_TOE_EXTENSOR]: [
+            [OTHER.TOE_FLEXORS], 
+            [OTHER.GASTROCNEMIUS_MEDIAL], 
+            [OTHER.POSTERIOR_TIBIALIS],
+        ],
     },
     [MUSCLE_CATEGORY.NECK]: {
+        [NECK.STERNOLEIDOMASTOID]: [
+            [OTHER.CERVICAL_EXTENSORS], 
+            [OTHER.UPPER_TRAPS], 
+            [SHOULDER.PECTORALIS_MAJOR], 
+            [OTHER.OPPOSITE_STERNOCLIEDOMASTOID],
+        ],
+        [NECK.CERVICAL_DEEP_FLEXOR]: [
+            [OTHER. UPPER_CERVICAL_EXTENSORS], 
+            [NECK.STERNOLEIDOMASTOID],
+        ],
+        [NECK.SCALENES]: [
+            [OTHER.OPPOSITE_SCALENES], 
+            [NECK.STERNOLEIDOMASTOID], 
+            [OTHER. UPPER_CERVICAL_EXTENSORS],
+        ],
+        [NECK.CERVICAL_EXTENSOR]: [
+            [NECK.CERVICAL_DEEP_FLEXOR], 
+            [NECK.STERNOLEIDOMASTOID], 
+            [NECK.SCALENES],
+        ],
+        [NECK.LEVATOR_SCAPULAE]: [
+            [OTHER.UPPER_TRAPS], 
+            [NECK.CERVICAL_EXTENSOR], 
+            [SHOULDER.RHOMBOIDS], 
+            [SHOULDER.LATISSIMUS_DORSI],
+        ],
     },
     [MUSCLE_CATEGORY.SHOULDER]: {
+        [SHOULDER.UPPER_MIDDLE_LOWER_TRAP]: [
+            [OTHER.UPPER_LATISSIMUS_DORSI], 
+            [ELBOWS_WRISTS.BICEPS_BRACHII], 
+            [SHOULDER.SUBSCAPULARIS], 
+            [OTHER.OPPOSITE_UPPER_TRAPS], 
+            [OTHER.MIDDLE_PECTORALIS_MAJOR], 
+            [SHOULDER.PECTORALIS_MINOR], 
+            [SHOULDER.RHOMBOIDS], 
+            [SHOULDER.SERRATUS_ANTERIOR], 
+            [OTHER.DIAPHRAGM], 
+            [OTHER.TERES_MINOR], 
+            [OTHER.LOWER_PECTORALIS_MAJOR], 
+            [OTHER.UPPER_TRAPS], 
+            [NECK.LEVATOR_SCAPULAE],
+        ],
+        [SHOULDER.LATISSIMUS_DORSI]: [
+            [OTHER.UPPER_TRAPS], 
+            [OTHER.OPPOSITE_HAMSTRING], 
+            [SHOULDER.SUPRASPINATUS], 
+            [OTHER.DELTOID], 
+            [NECK.LEVATOR_SCAPULAE],
+        ],
+        [SHOULDER.RHOMBOIDS]: [
+            [OTHER.DELTOID], 
+            [SHOULDER.SERRATUS_ANTERIOR], 
+            [SHOULDER.SUPRASPINATUS], 
+            [SHOULDER.LATISSIMUS_DORSI], 
+            [OTHER.TRAPEZIUS], 
+            [OTHER.TERES_MAJOR], 
+            [SHOULDER.PECTORALIS_MAJOR], 
+            [SHOULDER.PECTORALIS_MINOR],
+        ],
+        [SHOULDER.SUPRASPINATUS]: [
+            [SHOULDER.RHOMBOIDS], 
+            [SHOULDER.PECTORALIS_MINOR], 
+            [OTHER.TERES_MINOR], 
+            [OTHER.INFRASPINATUS], 
+            [SHOULDER.LATISSIMUS_DORSI], 
+            [OTHER.DELTOID], 
+            [OTHER.UPPER_TRAPS],
+        ],
+        [SHOULDER.INFRASPINATUS]: [
+            [SHOULDER.PECTORALIS_MAJOR], 
+            [OTHER.ANTERIOR_DELTOID], 
+            [OTHER.SUPRASPINATUS_FIBERS],
+        ],
+        [SHOULDER.SUBSCAPULARIS]: [
+            [OTHER.INFRASPINATUS], 
+            [SHOULDER.INFRASPINATUS], 
+            [OTHER.DELTOID], 
+            [SHOULDER.SUPRASPINATUS], 
+            [ELBOWS_WRISTS.BICEPS_BRACHII],
+        ],
+        [SHOULDER.PECTORALIS_MAJOR]: [
+            [OTHER.STERNAL_FIBERS_LEVATOR_SCAPULAE], 
+            [OTHER.TRAPEZIUS], 
+            [OTHER.POSTERIOR_DELTOID], 
+            [SHOULDER.SERRATUS_ANTERIOR], 
+            [SHOULDER.SUPRASPINATUS], 
+            [OTHER.CLAVICULAR_FIBERS_TERES_MAJOR], 
+            [OTHER.INFRASPINATUS], 
+            [SHOULDER.LATISSIMUS_DORSI], 
+            [SHOULDER.RHOMBOIDS], 
+            [SHOULDER.SUPRASPINATUS], 
+            [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MAXIMUS],
+        ],
+        [SHOULDER.PECTORALIS_MINOR]: [
+            [SHOULDER.SERRATUS_ANTERIOR], 
+            [SHOULDER.SUPRASPINATUS], 
+            [OTHER.DELTOID], 
+            [OTHER.UPPER_TRAPS],
+        ],
+        [SHOULDER.SERRATUS_ANTERIOR]: [
+            [SHOULDER.RHOMBOIDS], 
+            [SHOULDER.PECTORALIS_MAJOR], 
+            [SHOULDER.PECTORALIS_MINOR], 
+            [OTHER.MIDDLE_TRAPS], 
+            [OTHER.SERRATUS_ANTERIOR],
+        ],
     },
     [MUSCLE_CATEGORY.ELBOWS_WRISTS]: {
+        [ELBOWS_WRISTS.BICEPS_BRACHII]: [
+            [OTHER.TRICEPS_BRACHII], 
+            [OTHER.DELTOID], 
+            [SHOULDER.SUPRASPINATUS], 
+            [SHOULDER.PECTORALIS_MAJOR], 
+            [SHOULDER.LATISSIMUS_DORSI],
+        ],
+        [ELBOWS_WRISTS.BRACHIALIS]: [
+            [OTHER.TRICEPS_BRACHII], 
+            [ELBOWS_WRISTS.BICEPS_BRACHII], 
+            [ELBOWS_WRISTS.WRIST_FLEXOR], 
+            [ELBOWS_WRISTS.WRIST_EXTENSOR],
+        ],
+        [ELBOWS_WRISTS.PRONATOR]: [
+            [ELBOWS_WRISTS.SUPINATOR], 
+            [ELBOWS_WRISTS.WRIST_FLEXOR], 
+            [ELBOWS_WRISTS.WRIST_EXTENSOR],
+        ],
+        [ELBOWS_WRISTS.SUPINATOR]: [
+            [ELBOWS_WRISTS.PRONATOR], 
+            [ELBOWS_WRISTS.WRIST_FLEXOR], 
+            [ELBOWS_WRISTS.WRIST_EXTENSOR],
+        ],
+        [ELBOWS_WRISTS.WRIST_FLEXOR]: [
+            [ELBOWS_WRISTS.WRIST_EXTENSOR], 
+            [OTHER.FINGER_FLEXORS], 
+            [OTHER.FINGER_EXTENSORS],
+        ],
+        [ELBOWS_WRISTS.WRIST_EXTENSOR]: [
+            [ELBOWS_WRISTS.WRIST_FLEXOR], 
+            [OTHER.FINGER_FLEXORS], 
+            [OTHER.FINGER_EXTENSORS],
+        ],
     },
     [MUSCLE_CATEGORY.TRUNK]: {
+        [TRUNK.RECTUS_ABDOMINIS]: [
+            [LUMBAR_PELVIC_COMPLEX.ILIOPSOAS], 
+            [TRUNK.ERECTOR_SPINAE], 
+            [OTHER.DIAPHRAGM], 
+            [OTHER.SERRATUS_ANTERIOR],
+        ],
+        [TRUNK.EXTERNAL_AB_OBLIQUE]: [
+            [LUMBAR_PELVIC_COMPLEX.ILIOPSOAS], 
+            [TRUNK.ERECTOR_SPINAE], 
+            [OTHER.DIAPHRAGM], 
+            [TRUNK.INTERNAL_AB_OBLIQUE],
+        ],
+        [TRUNK.INTERNAL_AB_OBLIQUE]: [
+            [LUMBAR_PELVIC_COMPLEX.ILIOPSOAS], 
+            [TRUNK.ERECTOR_SPINAE], 
+            [OTHER.DIAPHRAGM], 
+            [TRUNK.EXTERNAL_AB_OBLIQUE],
+        ],
+        [TRUNK.TRANSVERSE_ABDOMINIS]: [
+            [OTHER.SERRATUS_ANTERIOR], 
+            [TRUNK.RECTUS_ABDOMINIS], 
+            [OTHER.DIAPHRAGM],
+        ],
+        [TRUNK.ERECTOR_SPINAE]: [
+            [LUMBAR_PELVIC_COMPLEX.GLUTEUS_MAXIMUS], 
+            [KNEE.HAMSTRING], 
+            [OTHER.ABDOMINALS], 
+            [OTHER.INTERCOSTALS],
+        ],
     },
 }
 
@@ -94,7 +316,7 @@ export const MUSCLE_TEXT = {
     [SHOULDER.PECTORALIS_MAJOR]: "대흉근",
     [SHOULDER.PECTORALIS_MINOR]: "소흉근",
     [SHOULDER.SERRATUS_ANTERIOR]: "전거근",
-    [ELBOWS_WRISTS.BICEPS_BRACHII]: "상완이두근",
+    [ELBOWS_WRISTS.BICEPS_BRACHII]: [ELBOWS_WRISTS.BICEPS_BRACHII],
     [ELBOWS_WRISTS.BRACHIALIS]: "상완근",
     [ELBOWS_WRISTS.PRONATOR]: "회내근",
     [ELBOWS_WRISTS.SUPINATOR]: "회외근",
@@ -106,49 +328,94 @@ export const MUSCLE_TEXT = {
     [TRUNK.TRANSVERSE_ABDOMINIS]: "복횡근",
     [TRUNK.ERECTOR_SPINAE]: "척추기립근",
     [OTHER.DIAPHRAGM]: "횡경막",
+    [OTHER.OPPOSITE_NECK_FLEXOR]: "반대쪽 목 굴곡근",
+    [OTHER.PIRIFORMIS]: "요방형근",
+    [OTHER.SARTORIUS]: "이상근",
+    [OTHER.TENSOR_FASCIAE_LATAE]: "대퇴근막장근",
+    [OTHER.OPPOSITE_RECTUS_ABDOMINIS]: "반대편 복직근",
+    [OTHER.PERONEUS]: "비골근",
+    [OTHER.TERES_MAJOR]: "봉공근",
+    [OTHER.ADDUCTOR_MAGNUS]: "내접근",
+    [OTHER.OPPOSITE_LATISSIMUS_DORSI]: "반대쪽 광배근",
+    [OTHER.QUADRICEPS]: "대퇴사두근",
+    [OTHER.GASTROCNEMIUS]: "슬와근",
+    [OTHER.GASTROCNEMIUS_MEDIAL]: "비복근",
+    [OTHER.SOLEUS]: "가자미근",
+    [OTHER.POSTERIOR_TIBIALIS]: "후경골근",
+    [OTHER.PLANTAR_FASCIA]: "족저근막",
+    [OTHER.TOE_FLEXORS]: "발가락 굴곡근",
+    [OTHER.ANTERIOR_TIBIALIS]: "전경골근",
+    [OTHER.TOE_EXTENSORS]: "발가락 신전근",
+    [OTHER.CERVICAL_EXTENSORS]: "목 신전근",
+    [OTHER.UPPER_TRAPS]: "상부 승모근",
+    [OTHER.OPPOSITE_STERNOCLIEDOMASTOID]: "반대쪽 흉쇄유돌근",
+    [OTHER.UPPER_CERVICAL_EXTENSORS]: "상부 목 신전근",
+    [OTHER.OPPOSITE_SCALENES]: "반대쪽 사각근",
+    [OTHER.UPPER_LATISSIMUS_DORSI]: "상부 광배근",
+    [OTHER.OPPOSITE_UPPER_TRAPS]: "반대쪽 상부 승모근",
+    [OTHER.MIDDLE_PECTORALIS_MAJOR]: "중부 대흉근",
+    [OTHER.TERES_MINOR]: "후거근(대원근)",
+    [OTHER.LOWER_PECTORALIS_MAJOR]: "하부 대흉근",
+    [OTHER.OPPOSITE_HAMSTRING]: "반대쪽 햄스트링",
+    [OTHER.DELTOID]: "삼각근",
+    [OTHER.TRAPEZIUS]: "승모근",
+    [OTHER.TERES_MAJOR]: "오훼완근",
+    [OTHER.INFRASPINATUS]: "소원근",
+    [OTHER.ANTERIOR_DELTOID]: "전면 삼각근",
+    [OTHER.SUPRASPINATUS_FIBERS]: "극하근 윗 섬유 or 아랫 섬유",
+    [OTHER.STERNAL_FIBERS_LEVATOR_SCAPULAE]: "흉골 섬유 능형근",
+    [OTHER.POSTERIOR_DELTOID]: "후면 삼각근",
+    [OTHER.CLAVICULAR_FIBERS_TERES_MAJOR]: "쇄골 섬유 대원근",
+    [OTHER.MIDDLE_TRAPS]: "중부 승모근",
+    [OTHER.SERRATUS_ANTERIOR]: "복사근",
+    [OTHER.TRICEPS_BRACHII]: "상완삼두근",
+    [OTHER.FINGER_FLEXORS]: "손가락 굴곡근",
+    [OTHER.FINGER_EXTENSORS]: "손가락 신전근",
+    [OTHER.ABDOMINALS]: "복근",
+    [OTHER.INTERCOSTALS]: "극간근",
 };
 
-export const MUSCLE_LIST = [
-    "ILIOPSOAS",  // 장요근
-    "ADDUCTORS",  // 내전근
-    "GLUTEUS_MEDIUS",  // 중둔근
-    "RECTUS_FEMORIS",  // 대퇴직근
-    "GLUTEUS_MAXIMUS",  // 대둔근
-    "HAMSTRING",  // 햄스트링
-    "DORSI_FLEXOR",  // 배측굴곡근
-    "PLANTAR_FLEXOR",  // 족저굴곡근
-    "EVERTOR",  // 외번근
-    "INVERTER",  // 내번근
-    "FIRST_TOE_FLEXOR",  // 엄지발가락 굴곡근
-    "FIRST_TOE_EXTENSOR",  // 엄지발가락 신전근
-    "TWO_FIVE_TH_TOE_FLEXOR",  // 나머지 발가락 굴곡
-    "TWO_FIVE_TH_TOE_EXTENSOR",  // 나머지 발가락 신전
-    "STERNOLEIDOMASTOID",  // 흉쇄유돌근
-    "CERVICAL_DEEP_FLEXOR",  // 경추 심부굴곡근
-    "SCALENES",  // 사각근
-    "CERVICAL_EXTENSOR",  // 경추 신전근
-    "LEVATOR_SCAPULAE",  // 견갑거근
-    "UPPER_MIDDLE_LOWER_TRAP",  // 상부, 중부, 하부 승모근
-    "LATISSIMUS_DORSI",  // 광배근
-    "RHOMBOIDS",  // 능형근
-    "SUPRASPINATUS",  // 극상근
-    "INFRASPINATUS",  // 극하근
-    "SUBSCAPULARIS",  // 견갑하근
-    "PECTORALIS_MAJOR",  // 대흉근
-    "PECTORALIS_MINOR",  // 소흉근
-    "SERRATUS_ANTERIOR",  // 전거근
-    "BICEPS_BRACHII",  // 상완이두근
-    "BRACHIALIS",  // 상완근
-    "PRONATOR",  // 회내근
-    "SUPINATOR",  // 회외근
-    "WRIST_FLEXOR",  // 손목 굴곡근
-    "WRIST_EXTENSOR",  // 손목 신전근
-    "RECTUS_ABDOMINIS",  // 복직근
-    "EXTERNAL_AB_OBLIQUE",  // 외복사근
-    "INTERNAL_AB_OBLIQUE", // 내복사근
-    "TRANSVERSE_ABDOMINIS",  // 복횡근
-    "ERECTOR_SPINAE",  // 척추기립근
-];
+// export const MUSCLE_LIST = [
+//     "ILIOPSOAS",  // 장요근
+//     "ADDUCTORS",  // 내전근
+//     "GLUTEUS_MEDIUS",  // 중둔근
+//     "RECTUS_FEMORIS",  // 대퇴직근
+//     "GLUTEUS_MAXIMUS",  // 대둔근
+//     "HAMSTRING",  // 햄스트링
+//     "DORSI_FLEXOR",  // 배측굴곡근
+//     "PLANTAR_FLEXOR",  // 족저굴곡근
+//     "EVERTOR",  // 외번근
+//     "INVERTER",  // 내번근
+//     "FIRST_TOE_FLEXOR",  // 엄지발가락 굴곡근
+//     "FIRST_TOE_EXTENSOR",  // 엄지발가락 신전근
+//     "TWO_FIVE_TH_TOE_FLEXOR",  // 나머지 발가락 굴곡
+//     "TWO_FIVE_TH_TOE_EXTENSOR",  // 나머지 발가락 신전
+//     "STERNOLEIDOMASTOID",  // 흉쇄유돌근
+//     "CERVICAL_DEEP_FLEXOR",  // 경추 심부굴곡근
+//     "SCALENES",  // 사각근
+//     "CERVICAL_EXTENSOR",  // 경추 신전근
+//     "LEVATOR_SCAPULAE",  // 견갑거근
+//     "UPPER_MIDDLE_LOWER_TRAP",  // 상부, 중부, 하부 승모근
+//     "LATISSIMUS_DORSI",  // 광배근
+//     "RHOMBOIDS",  // 능형근
+//     "SUPRASPINATUS",  // 극상근
+//     "INFRASPINATUS",  // 극하근
+//     "SUBSCAPULARIS",  // 견갑하근
+//     "PECTORALIS_MAJOR",  // 대흉근
+//     "PECTORALIS_MINOR",  // 소흉근
+//     "SERRATUS_ANTERIOR",  // 전거근
+//     "BICEPS_BRACHII",  // 상완이두근
+//     "BRACHIALIS",  // 상완근
+//     "PRONATOR",  // 회내근
+//     "SUPINATOR",  // 회외근
+//     "WRIST_FLEXOR",  // 손목 굴곡근
+//     "WRIST_EXTENSOR",  // 손목 신전근
+//     "RECTUS_ABDOMINIS",  // 복직근
+//     "EXTERNAL_AB_OBLIQUE",  // 외복사근
+//     "INTERNAL_AB_OBLIQUE", // 내복사근
+//     "TRANSVERSE_ABDOMINIS",  // 복횡근
+//     "ERECTOR_SPINAE",  // 척추기립근
+// ];
 
 export const LUMBAR_PELVIC_COMPLEX = {
     ILIOPSOAS: "ILIOPSOAS",  // 장요근
@@ -212,5 +479,50 @@ export const TRUNK = {
 }
 
 export const OTHER = {
-    DIAPHRAGM: "DIAPHRAGM" // 횡경막
+    DIAPHRAGM: "DIAPHRAGM", // 횡경막
+    OPPOSITE_NECK_FLEXOR: "OPPOSITE_NECK_FLEXOR", // 반대쪽 목 굴곡근
+    PIRIFORMIS: "PIRIFORMIS", // 요방형근
+    SARTORIUS: "SARTORIUS",  // 이상근
+    TENSOR_FASCIAE_LATAE: "TENSOR_FASCIAE_LATAE", // 대퇴근막장근
+    OPPOSITE_RECTUS_ABDOMINIS: "OPPOSITE_RECTUS_ABDOMINIS", // 반대편 복직근
+    PERONEUS: "PERONEUS", // 비골근
+    TERES_MAJOR: "TERES_MAJOR", // 봉공근
+    ADDUCTOR_MAGNUS: "ADDUCTOR_MAGNUS", // 내접근
+    OPPOSITE_LATISSIMUS_DORSI: "OPPOSITE_LATISSIMUS_DORSI", // 반대쪽 광배근
+    QUADRICEPS: "QUADRICEPS", // 대퇴사두근
+    GASTROCNEMIUS: "GASTROCNEMIUS", // 슬와근
+    GASTROCNEMIUS_MEDIAL: "GASTROCNEMIUS_MEDIAL", // 비복근
+    SOLEUS: "SOLEUS", // 가자미근
+    POSTERIOR_TIBIALIS: "POSTERIOR_TIBIALIS", // 후경골근
+    PLANTAR_FASCIA: "PLANTAR_FASCIA", // 족저근막
+    TOE_FLEXORS: "TOE_FLEXORS", // 발가락 굴곡근
+    ANTERIOR_TIBIALIS: "ANTERIOR_TIBIALIS", // 전경골근
+    TOE_EXTENSORS: "TOE_EXTENSORS", // 발가락 신전근
+    CERVICAL_EXTENSORS: "CERVICAL_EXTENSORS", // 목 신전근
+    UPPER_TRAPS: "UPPER_TRAPS", // 상부 승모근
+    OPPOSITE_STERNOCLIEDOMASTOID: "OPPOSITE_STERNOCLIEDOMASTOID", // 반대쪽 흉쇄유돌근
+    UPPER_CERVICAL_EXTENSORS: "UPPER_CERVICAL_EXTENSORS", // 상부 목 신전근
+    OPPOSITE_SCALENES: "OPPOSITE_SCALENES", // 반대쪽 사각근
+    UPPER_LATISSIMUS_DORSI: "UPPER_LATISSIMUS_DORSI", // 상부 광배근
+    OPPOSITE_UPPER_TRAPS: "OPPOSITE_UPPER_TRAPS", // 반대쪽 상부 승모근
+    MIDDLE_PECTORALIS_MAJOR: "MIDDLE_PECTORALIS_MAJOR", // 중부 대흉근
+    TERES_MINOR: "TERES_MINOR", // 후거근(대원근)
+    LOWER_PECTORALIS_MAJOR: "LOWER_PECTORALIS_MAJOR", // 하부 대흉근
+    OPPOSITE_HAMSTRING: "OPPOSITE_HAMSTRING", // 반대쪽 햄스트링
+    DELTOID: "DELTOID", // 삼각근
+    TRAPEZIUS: "TRAPEZIUS", // 승모근
+    TERES_MAJOR: "TERES_MAJOR", // 오훼완근
+    INFRASPINATUS: "INFRASPINATUS", // 소원근
+    ANTERIOR_DELTOID: "ANTERIOR_DELTOID", // 전면 삼각근
+    SUPRASPINATUS_FIBERS: "SUPRASPINATUS_FIBERS", // 극하근 윗 섬유 or 아랫 섬유
+    STERNAL_FIBERS_LEVATOR_SCAPULAE: "STERNAL_FIBERS_LEVATOR_SCAPULAE", // 흉골 섬유 능형근
+    POSTERIOR_DELTOID: "POSTERIOR_DELTOID", // 후면 삼각근
+    CLAVICULAR_FIBERS_TERES_MAJOR: "CLAVICULAR_FIBERS_TERES_MAJOR", // 쇄골 섬유 대원근
+    MIDDLE_TRAPS: "MIDDLE_TRAPS", // 중부 승모근
+    SERRATUS_ANTERIOR: "SERRATUS_ANTERIOR", // 복사근
+    TRICEPS_BRACHII: "TRICEPS_BRACHII", // 상완삼두근
+    FINGER_FLEXORS: "FINGER_FLEXORS", // 손가락 굴곡근
+    FINGER_EXTENSORS: "FINGER_EXTENSORS", // 손가락 신전근
+    ABDOMINALS: "ABDOMINALS", // 복근
+    INTERCOSTALS: "INTERCOSTALS", // 극간근
 }
